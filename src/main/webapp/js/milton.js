@@ -10,20 +10,29 @@ $(document).ready(function () {
 });
 
 function enviar(form) {
-    console.log("Enviando...");
     var array_nao_indexado = $("form").serializeArray();
     var array_indexado = {};
+    var url = 'rest/agendamentos';
+    var metodo = 'POST';
 
     $.map(array_nao_indexado, function (n, i) {
         array_indexado[n['name']] = n['value'];
     });
 
+
     $.ajax({
-        type: "POST",
-//        contentType: "application/json",
-        contentType: 'json',
-        url: 'http://localhost:8084/agendamentoBackend/rest/agendamentos',
-        data: array_indexado,
+        url: url,
+        type: metodo,
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        data: JSON.stringify(array_indexado),
+        sucess: function (data) {
+            console.log("Suuucesuuu...");
+            console.log(JSON.stringify(array_indexado));
+        },
+        error: function () {
+            console.log('Errooouuuuu');
+        }
     });
 }
 
@@ -35,4 +44,5 @@ function novoModal(el) {
 
 function alternar(id) {
     $("#" + id).toggleClass('is-active');
-};
+}
+;

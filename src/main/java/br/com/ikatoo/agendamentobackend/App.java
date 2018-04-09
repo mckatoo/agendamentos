@@ -16,6 +16,6 @@ import org.glassfish.jersey.server.ResourceConfig;
 @ApplicationPath("rest")
 public class App extends ResourceConfig {
     public App(){
-        packages("br.com.ikatoo.agendamentobackend.controllers");
+        packages("br.com.ikatoo.agendamentobackend.controllers").register(ResponseFilter.class);
     }
 }

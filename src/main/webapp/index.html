@@ -324,7 +324,7 @@
                     <button class="delete" aria-label="close" onclick="alternar('modalAdd')"></button>
                 </header>
                 <section class="modal-card-body">
-                    <form onsubmit="enviar(this)">
+                    <form onsubmit="enviar(this)" id="frmAgendamento">
                         <div class="field">
                             <label class="label">Dia</label>
                             <p class="control">
@@ -393,6 +393,9 @@
                             <p class="control">
                                 <button class="button is-primary">Cadastrar</button>
                             </p>
+                            <a href="#" class="button" onclick="enviar('#frmAgendamento')">
+                                teste
+                            </a>
                             <p class="control">
                                 <button type="reset" class="button is-link" onclick="alternar('modalAdd')">Cancelar</button>
                             </p>

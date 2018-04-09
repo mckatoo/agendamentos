@@ -1,3 +1,4 @@
 br/com/ikatoo/agendamentobackend/controllers/AgendamentosController.class
+br/com/ikatoo/agendamentobackend/ResponseFilter.class
 br/com/ikatoo/agendamentobackend/models/Agendamento.class
 br/com/ikatoo/agendamentobackend/App.class
