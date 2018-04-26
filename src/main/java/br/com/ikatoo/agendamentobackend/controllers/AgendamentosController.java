@@ -5,7 +5,8 @@
  */
 package br.com.ikatoo.agendamentobackend.controllers;
 
-import br.com.ikatoo.agendamentobackend.models.Agendamento;
+import br.com.ikatoo.agendamentobackend.models.Agendamentos;
+import br.com.ikatoo.agendamentobackend.models.Turmas;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -31,19 +32,21 @@ public class AgendamentosController {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/")
-    public List<Agendamento> listAgendamentos() throws ParseException {
-        Agendamento agend1 = new Agendamento();
+    public List<Agendamentos> listAgendamentos() throws ParseException {
+        Agendamentos agend1 = new Agendamentos();
         agend1.setDia(new SimpleDateFormat("dd/MM/yyyy").parse("01/01/2001"));
         agend1.setAmplificador(true);
         agend1.setDatashow(true);
-        agend1.setIdCurso(0);
-        agend1.setIdProfessor(0);
-        agend1.setIdTurma(0);
+        
+//        agend1.setIdCurso(0);
+//        agend1.setIdProfessor(0);
+//        agend1.setIdTurma(0);
+
         agend1.setPreaula(true);
         agend1.setPrimeirop(true);
         agend1.setSegundop(true);
 
-        Agendamento agend2 = new Agendamento();
+        Agendamentos agend2 = new Agendamentos();
         agend2.setDia(new SimpleDateFormat("dd/MM/yyyy").parse("22/02/2001"));
         agend2.setAmplificador(false);
         agend2.setDatashow(true);
