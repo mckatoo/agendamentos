@@ -1,4 +1,11 @@
+/home/mckatoo/Projetos/agendamentos/src/main/java/br/com/ikatoo/agendamentobackend/models/TurmasPK.java
+/home/mckatoo/Projetos/agendamentos/src/main/java/br/com/ikatoo/agendamentobackend/models/Agendamentos.java
+/home/mckatoo/Projetos/agendamentos/src/main/java/br/com/ikatoo/agendamentobackend/testes/Teste.java
+/home/mckatoo/Projetos/agendamentos/src/main/java/br/com/ikatoo/agendamentobackend/models/Professores.java
+/home/mckatoo/Projetos/agendamentos/src/main/java/br/com/ikatoo/agendamentobackend/models/Turmas.java
 /home/mckatoo/Projetos/agendamentos/src/main/java/br/com/ikatoo/agendamentobackend/controllers/AgendamentosController.java
+/home/mckatoo/Projetos/agendamentos/src/main/java/br/com/ikatoo/agendamentobackend/infra/HibernateUtil.java
+/home/mckatoo/Projetos/agendamentos/src/main/java/br/com/ikatoo/agendamentobackend/models/Cursos.java
 /home/mckatoo/Projetos/agendamentos/src/main/java/br/com/ikatoo/agendamentobackend/App.java
-/home/mckatoo/Projetos/agendamentos/src/main/java/br/com/ikatoo/agendamentobackend/models/Agendamento.java
+/home/mckatoo/Projetos/agendamentos/src/main/java/br/com/ikatoo/agendamentobackend/models/AgendamentosPK.java
 /home/mckatoo/Projetos/agendamentos/src/main/java/br/com/ikatoo/agendamentobackend/ResponseFilter.java

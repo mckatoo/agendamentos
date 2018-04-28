@@ -6,7 +6,6 @@
 package br.com.ikatoo.agendamentobackend.controllers;
 
 import br.com.ikatoo.agendamentobackend.models.Agendamentos;
-import br.com.ikatoo.agendamentobackend.models.Turmas;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -50,25 +49,25 @@ public class AgendamentosController {
         agend2.setDia(new SimpleDateFormat("dd/MM/yyyy").parse("22/02/2001"));
         agend2.setAmplificador(false);
         agend2.setDatashow(true);
-        agend2.setIdCurso(1);
-        agend2.setIdProfessor(3);
-        agend2.setIdTurma(2);
+//        agend2.setIdCurso(1);
+//        agend2.setIdProfessor(3);
+//        agend2.setIdTurma(2);
         agend2.setPreaula(false);
         agend2.setPrimeirop(true);
         agend2.setSegundop(false);
 
-        Agendamento agend3 = new Agendamento();
+        Agendamentos agend3 = new Agendamentos();
         agend3.setDia(new SimpleDateFormat("dd/MM/yyyy").parse("25/03/2003"));
         agend3.setAmplificador(false);
         agend3.setDatashow(false);
-        agend3.setIdCurso(3);
-        agend3.setIdProfessor(1);
-        agend3.setIdTurma(0);
+//        agend3.setIdCurso(3);
+//        agend3.setIdProfessor(1);
+//        agend3.setIdTurma(0);
         agend3.setPreaula(false);
         agend3.setPrimeirop(false);
         agend3.setSegundop(false);
 
-        List<Agendamento> agendamentos = new ArrayList<>();
+        List<Agendamentos> agendamentos = new ArrayList();
         agendamentos.add(agend1);
         agendamentos.add(agend2);
         agendamentos.add(agend3);
@@ -79,16 +78,15 @@ public class AgendamentosController {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("{id}/")
-    public Agendamento getAgendamento(@PathParam("id") long id) throws ParseException {
+    public Agendamentos getAgendamento(@PathParam("id") long id) throws ParseException {
 
-        Agendamento agend1 = new Agendamento();
-        agend1.setIdAgendamento(id);
+        Agendamentos agend1 = new Agendamentos();
         agend1.setDia(new SimpleDateFormat("dd/MM/yyyy").parse("01/01/2001"));
         agend1.setAmplificador(true);
         agend1.setDatashow(true);
-        agend1.setIdCurso(0);
-        agend1.setIdProfessor(0);
-        agend1.setIdTurma(0);
+//        agend1.setIdCurso(0);
+//        agend1.setIdProfessor(0);
+//        agend1.setIdTurma(0);
         agend1.setPreaula(true);
         agend1.setPrimeirop(true);
         agend1.setSegundop(true);
@@ -99,7 +97,7 @@ public class AgendamentosController {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("/")
-    public Response create(Agendamento agendamento) {
+    public Response create(Agendamentos agendamento) {
         System.out.println("Imprimindo");
         System.out.println(agendamento.toString());
         return Response.status(Response.Status.OK).build();
@@ -108,7 +106,7 @@ public class AgendamentosController {
     @PUT
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("/")
-    public Response update(Agendamento agendamento) {
+    public Response update(Agendamentos agendamento) {
         System.out.println(agendamento.toString());
         return Response.status(Response.Status.OK).build();
     }
