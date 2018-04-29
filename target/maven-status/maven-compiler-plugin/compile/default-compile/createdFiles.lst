@@ -1,11 +1,14 @@
 br/com/ikatoo/agendamentobackend/models/Professores.class
-br/com/ikatoo/agendamentobackend/models/TurmasPK.class
 br/com/ikatoo/agendamentobackend/models/Agendamentos.class
+br/com/ikatoo/agendamentobackend/connection/ConnectionFactory.class
 br/com/ikatoo/agendamentobackend/testes/Teste.class
+br/com/ikatoo/agendamentobackend/models/dao/TurmasDAO.class
 br/com/ikatoo/agendamentobackend/infra/HibernateUtil.class
-br/com/ikatoo/agendamentobackend/models/AgendamentosPK.class
+br/com/ikatoo/agendamentobackend/models/dao/ProfessoresDAO.class
 br/com/ikatoo/agendamentobackend/models/Cursos.class
 br/com/ikatoo/agendamentobackend/controllers/AgendamentosController.class
+br/com/ikatoo/agendamentobackend/models/dao/CursosDAO.class
 br/com/ikatoo/agendamentobackend/models/Turmas.class
 br/com/ikatoo/agendamentobackend/ResponseFilter.class
+br/com/ikatoo/agendamentobackend/models/dao/AgendamentosDAO.class
 br/com/ikatoo/agendamentobackend/App.class

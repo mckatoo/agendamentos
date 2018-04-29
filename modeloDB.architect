@@ -4,9 +4,18 @@
  <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
  <project-data-sources>
   <data-source id="DS0">
-   <property key="Logical" value="Modelo de Dados" />
+   <property key="Logical" value="Agendamentos" />
+   <property key="Connection Type" value="PostgreSQL" />
+   <property key="JDBC URL" value="jdbc:postgresql://localhost:49162/agendamentos" />
+   <property key="UID" value="mckatoo" />
+   <property key="PWD" value="mikito" />
+   <property key="ca.sqlpower.architect.etl.kettle.database" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.port" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.hostname" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.login" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.password" value="" />
   </data-source>
-  <data-source id="DS2">
+  <data-source id="DS0">
    <property key="Connection Type" value="PostgreSQL" />
    <property key="Logical" value="Agendamentos" />
    <property key="JDBC URL" value="jdbc:postgresql://localhost:49162/agendamentos" />
@@ -20,7 +29,7 @@
   </data-source>
  </project-data-sources>
  <source-databases>
-  <database id="DB0" populated="true" UUID="68be837c-da0c-4841-b178-0bcb09d4fad4" dbcs-ref="DS2" name="Agendamentos" physicalName="Agendamentos" >
+  <database id="DB0" populated="true" UUID="68be837c-da0c-4841-b178-0bcb09d4fad4" dbcs-ref="DS0" name="Agendamentos" physicalName="Agendamentos" >
    <catalog id="CAT1" populated="true" UUID="357baf05-2e55-4bc6-b0a0-2f0ca3ec6db0" name="agendamentos" nativeTerm="database" physicalName="agendamentos" >
     <schema id="SCH2" populated="false" UUID="93c44870-4594-40f5-ab6d-9563902a850f" name="information_schema" nativeTerm="schema" physicalName="information_schema" >
     </schema>
@@ -35,16 +44,16 @@
        <column id="COL7" populated="true" UUID="ecb794af-de02-4632-bdf7-0ee5494f5981" autoIncrement="true" defaultValue="nextval(&apos;agendamentos_idagendamento_seq&apos;::regclass)" name="idagendamento" nullable="0" physicalName="idagendamento" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="serial" type="4" >
         <remarks></remarks>
        </column>
-       <column id="COL8" populated="true" UUID="91b10ce9-e6e9-42ca-aeb6-c0f716436866" autoIncrement="false" name="idprofessor" nullable="0" physicalName="idprofessor" precision="10" primaryKeySeq="1" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+       <column id="COL8" populated="true" UUID="91b10ce9-e6e9-42ca-aeb6-c0f716436866" autoIncrement="false" defaultValue="" name="idprofessor" nullable="0" physicalName="idprofessor" precision="10" primaryKeySeq="1" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
         <remarks></remarks>
        </column>
-       <column id="COL9" populated="true" UUID="1baeb82e-f16c-4b7b-991a-c4c86653e85f" autoIncrement="false" name="idturma" nullable="0" physicalName="idturma" precision="10" primaryKeySeq="2" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+       <column id="COL9" populated="true" UUID="1baeb82e-f16c-4b7b-991a-c4c86653e85f" autoIncrement="false" defaultValue="" name="idturma" nullable="0" physicalName="idturma" precision="10" primaryKeySeq="2" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
         <remarks></remarks>
        </column>
-       <column id="COL10" populated="true" UUID="9d340857-0375-47b3-a541-9610b3d02a2c" autoIncrement="false" name="idcurso" nullable="0" physicalName="idcurso" precision="10" primaryKeySeq="3" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+       <column id="COL10" populated="true" UUID="9d340857-0375-47b3-a541-9610b3d02a2c" autoIncrement="false" defaultValue="" name="idcurso" nullable="0" physicalName="idcurso" precision="10" primaryKeySeq="3" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
         <remarks></remarks>
        </column>
-       <column id="COL11" populated="true" UUID="6758681d-5c9e-47f4-b24f-7ce3c8f25b88" autoIncrement="false" name="dia" nullable="0" physicalName="dia" precision="13" referenceCount="1" scale="0" sourceDataTypeName="date" type="91" >
+       <column id="COL11" populated="true" UUID="6758681d-5c9e-47f4-b24f-7ce3c8f25b88" autoIncrement="false" defaultValue="" name="dia" nullable="0" physicalName="dia" precision="13" referenceCount="1" scale="0" sourceDataTypeName="date" type="91" >
         <remarks></remarks>
        </column>
        <column id="COL12" populated="true" UUID="27fe3f8b-634d-43df-b232-6b7f0b702bd1" autoIncrement="false" defaultValue="false" name="preaula" nullable="0" physicalName="preaula" precision="1" referenceCount="1" scale="0" sourceDataTypeName="bool" type="16" >
@@ -82,7 +91,7 @@
        <column id="COL23" populated="true" UUID="7174d1c4-bee2-4d60-88c3-d8957a5c8b05" autoIncrement="true" defaultValue="nextval(&apos;cursos_idcurso_seq&apos;::regclass)" name="idcurso" nullable="0" physicalName="idcurso" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="serial" type="4" >
         <remarks></remarks>
        </column>
-       <column id="COL24" populated="true" UUID="4da48480-4d74-4a3b-9e4a-d3d13a31ec39" autoIncrement="false" name="curso" nullable="0" physicalName="curso" precision="50" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+       <column id="COL24" populated="true" UUID="4da48480-4d74-4a3b-9e4a-d3d13a31ec39" autoIncrement="false" defaultValue="" name="curso" nullable="0" physicalName="curso" precision="50" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
         <remarks></remarks>
        </column>
        </folder>
@@ -102,7 +111,7 @@
        <column id="COL28" populated="true" UUID="feaf4f1e-532f-4abd-b719-77d4dc933bd7" autoIncrement="true" defaultValue="nextval(&apos;professores_idprofessor_seq&apos;::regclass)" name="idprofessor" nullable="0" physicalName="idprofessor" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="serial" type="4" >
         <remarks></remarks>
        </column>
-       <column id="COL29" populated="true" UUID="a68890df-bd4f-46ce-a240-b87659d8045b" autoIncrement="false" name="professor" nullable="0" physicalName="professor" precision="50" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+       <column id="COL29" populated="true" UUID="a68890df-bd4f-46ce-a240-b87659d8045b" autoIncrement="false" defaultValue="" name="professor" nullable="0" physicalName="professor" precision="50" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
         <remarks></remarks>
        </column>
        </folder>
@@ -119,13 +128,13 @@
      <table id="TAB32" populated="true" UUID="bbabc030-eba7-42b9-a436-66c78415a6b3" name="turmas" objectType="TABLE" physicalName="turmas" >
       <remarks></remarks>
       <folder id="FOLTAB321" populated="true" name="Columns" physicalName="Columns" type="1">
-       <column id="COL33" populated="true" UUID="b60872a3-888f-4cc4-9c67-80194ae51422" autoIncrement="false" name="idturma" nullable="0" physicalName="idturma" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+       <column id="COL33" populated="true" UUID="b60872a3-888f-4cc4-9c67-80194ae51422" autoIncrement="false" defaultValue="" name="idturma" nullable="0" physicalName="idturma" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
         <remarks></remarks>
        </column>
-       <column id="COL34" populated="true" UUID="c5f86493-2b43-438a-a9fc-b8ad7d228c23" autoIncrement="false" name="idcurso" nullable="0" physicalName="idcurso" precision="10" primaryKeySeq="1" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+       <column id="COL34" populated="true" UUID="c5f86493-2b43-438a-a9fc-b8ad7d228c23" autoIncrement="false" defaultValue="" name="idcurso" nullable="0" physicalName="idcurso" precision="10" primaryKeySeq="1" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
         <remarks></remarks>
        </column>
-       <column id="COL35" populated="true" UUID="ef54b74a-9d94-4e19-9dfc-4a046efc5381" autoIncrement="false" name="turma" nullable="0" physicalName="turma" precision="100" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+       <column id="COL35" populated="true" UUID="ef54b74a-9d94-4e19-9dfc-4a046efc5381" autoIncrement="false" defaultValue="" name="turma" nullable="0" physicalName="turma" precision="100" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
         <remarks></remarks>
        </column>
        </folder>
@@ -160,7 +169,7 @@
   <table id="TAB47" populated="true" UUID="b80e26a8-b79f-41fa-b5cb-8f397fbc7c1d" name="cursos" objectType="TABLE" physicalName="cursos" >
    <remarks></remarks>
    <folder id="FOLTAB471" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL48" populated="true" UUID="4f7b7391-a540-4457-9918-d291cf4403ce" autoIncrement="true" defaultValue="nextval(&apos;cursos_idcurso_seq&apos;::regclass)" name="idcurso" nullable="0" physicalName="idcurso" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL23" sourceDataTypeName="serial" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL48" populated="true" UUID="4f7b7391-a540-4457-9918-d291cf4403ce" autoIncrement="true" defaultValue="" name="idcurso" nullable="0" physicalName="idcurso" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL23" sourceDataTypeName="serial" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
     <column id="COL49" populated="true" UUID="8d471160-2a34-45f1-8575-7fc1633c2069" autoIncrement="false" defaultValue="" name="curso" nullable="0" physicalName="curso" precision="50" referenceCount="1" scale="0" source-column-ref="COL24" sourceDataTypeName="varchar" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
@@ -204,7 +213,7 @@
   <table id="TAB59" populated="true" UUID="a6b0b493-115c-42a8-bcf4-5ae9e58ff16b" name="professores" objectType="TABLE" physicalName="professores" >
    <remarks></remarks>
    <folder id="FOLTAB591" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL60" populated="true" UUID="641edb1f-9511-4ffb-99f0-e4718dcc6293" autoIncrement="true" defaultValue="nextval(&apos;professores_idprofessor_seq&apos;::regclass)" name="idprofessor" nullable="0" physicalName="idprofessor" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL28" sourceDataTypeName="serial" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL60" populated="true" UUID="641edb1f-9511-4ffb-99f0-e4718dcc6293" autoIncrement="true" defaultValue="" name="idprofessor" nullable="0" physicalName="idprofessor" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL28" sourceDataTypeName="serial" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
     <column id="COL61" populated="true" UUID="3be9529c-4591-437d-9288-730aeea1394c" autoIncrement="false" defaultValue="" name="professor" nullable="0" physicalName="professor" precision="50" referenceCount="1" scale="0" source-column-ref="COL29" sourceDataTypeName="varchar" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
@@ -224,7 +233,7 @@
   <table id="TAB64" populated="true" UUID="a9309b3a-07db-44b2-82fd-fc17a5a5b4ec" name="agendamentos" objectType="TABLE" physicalName="agendamentos" >
    <remarks></remarks>
    <folder id="FOLTAB641" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL65" populated="true" UUID="89e00bb0-5801-4b88-9e49-6070794f8f20" autoIncrement="true" defaultValue="nextval(&apos;agendamentos_idagendamento_seq&apos;::regclass)" name="idagendamento" nullable="0" physicalName="idagendamento" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL7" sourceDataTypeName="serial" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL65" populated="true" UUID="89e00bb0-5801-4b88-9e49-6070794f8f20" autoIncrement="true" defaultValue="" name="idagendamento" nullable="0" physicalName="idagendamento" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL7" sourceDataTypeName="serial" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
     <column id="COL66" populated="true" UUID="d71d0ef5-8943-487f-9d9b-8f3f391eea30" autoIncrement="false" defaultValue="" name="idprofessor" nullable="0" physicalName="idprofessor" precision="0" primaryKeySeq="1" referenceCount="2" scale="0" source-column-ref="COL8" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
