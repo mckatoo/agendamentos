@@ -38,6 +38,7 @@ public class Agendamentos {
     private Boolean segundop;
     private Boolean datashow;
     private Boolean amplificador;
+    private String observacao;
 
     public Integer getIdagendamento() {
         return idagendamento;
@@ -117,6 +118,14 @@ public class Agendamentos {
 
     public void setAmplificador(Boolean amplificador) {
         this.amplificador = amplificador;
+    }
+
+    public String getObservacao() {
+        return observacao;
+    }
+
+    public void setObservacao(String observacao) {
+        this.observacao = observacao;
     }
 
 }

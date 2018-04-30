@@ -9,6 +9,9 @@
 /home/mckatoo/Projetos/agendamentos/src/main/java/br/com/ikatoo/agendamentobackend/models/dao/CursosDAO.java
 /home/mckatoo/Projetos/agendamentos/src/main/java/br/com/ikatoo/agendamentobackend/models/Agendamentos.java
 /home/mckatoo/Projetos/agendamentos/src/main/java/br/com/ikatoo/agendamentobackend/testes/Teste.java
+/home/mckatoo/Projetos/agendamentos/src/main/java/br/com/ikatoo/agendamentobackend/controllers/CursosController.java
 /home/mckatoo/Projetos/agendamentos/src/main/java/br/com/ikatoo/agendamentobackend/controllers/AgendamentosController.java
 /home/mckatoo/Projetos/agendamentos/src/main/java/br/com/ikatoo/agendamentobackend/infra/HibernateUtil.java
 /home/mckatoo/Projetos/agendamentos/src/main/java/br/com/ikatoo/agendamentobackend/models/dao/TurmasDAO.java
+/home/mckatoo/Projetos/agendamentos/src/main/java/br/com/ikatoo/agendamentobackend/controllers/ProfessoresController.java
+/home/mckatoo/Projetos/agendamentos/src/main/java/br/com/ikatoo/agendamentobackend/controllers/TurmasController.java

@@ -28,20 +28,20 @@ public class Teste {
 
         Professores p = new Professores();
         ProfessoresDAO Pdao = new ProfessoresDAO();
-        p.setIdprofessor(3);
-//        p.setProfessor("Professor Adm");
+        p.setIdprofessor(15);
+//        p.setProfessor("Professor Pedagogia");
         Pdao.save(p);
         
         Cursos c = new Cursos();
         CursosDAO Cdao = new CursosDAO();
-        c.setIdcurso(12);
-//        c.setCurso("Ciência da Computação");
+        c.setIdcurso(16);
+//        c.setCurso("Pedagogia");
         Cdao.save(c);
         
         Turmas t = new Turmas();
         TurmasDAO Tdao = new TurmasDAO();
-        t.setIdturma(13);
-//        t.setTurma("Primeiro Semestre");
+        t.setIdturma(17);
+//        t.setTurma("Terceiro Semestre");
         t.setCurso(c);
         Tdao.save(t);
         
@@ -50,13 +50,13 @@ public class Teste {
         a.setTurma(t);
         a.setCurso(c);
         DateFormat f = new SimpleDateFormat("dd/MM/yyyy");
-        Date dia = f.parse("05/06/2018");
+        Date dia = f.parse("30/05/2018");
         a.setDia(dia);
-        a.setPreaula(false);
+        a.setPreaula(true);
         a.setPrimeirop(false);
-        a.setSegundop(false);
+        a.setSegundop(true);
         a.setDatashow(false);
-        a.setAmplificador(false);
+        a.setAmplificador(true);
         AgendamentosDAO Adao = new AgendamentosDAO();
         Adao.save(a);
 

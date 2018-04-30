@@ -16,9 +16,9 @@ import javax.persistence.EntityManager;
  */
 public class TurmasDAO {
 
-    public Turmas save(Turmas turmas) {
+    private EntityManager em = new ConnectionFactory().getConnection();
 
-        EntityManager em = new ConnectionFactory().getConnection();
+    public Turmas save(Turmas turmas) {
 
         try {
             em.getTransaction().begin();
@@ -41,7 +41,6 @@ public class TurmasDAO {
 
     public Turmas remove(Integer id) {
 
-        EntityManager em = new ConnectionFactory().getConnection();
         Turmas turmas = null;
 
         try {
@@ -62,7 +61,6 @@ public class TurmasDAO {
 
     public Turmas findById(Integer id) {
 
-        EntityManager em = new ConnectionFactory().getConnection();
         Turmas turmas = null;
 
         try {
@@ -79,7 +77,6 @@ public class TurmasDAO {
 
     public List<Turmas> findAll() {
 
-        EntityManager em = new ConnectionFactory().getConnection();
         List<Turmas> turmas = null;
 
         try {

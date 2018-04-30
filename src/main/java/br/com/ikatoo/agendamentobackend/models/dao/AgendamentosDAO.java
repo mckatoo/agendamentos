@@ -16,9 +16,9 @@ import javax.persistence.EntityManager;
  */
 public class AgendamentosDAO {
 
-    public Agendamentos save(Agendamentos agendamentos) {
+    private EntityManager em = new ConnectionFactory().getConnection();
 
-        EntityManager em = new ConnectionFactory().getConnection();
+    public Agendamentos save(Agendamentos agendamentos) {
 
         try {
             em.getTransaction().begin();
@@ -41,7 +41,6 @@ public class AgendamentosDAO {
 
     public Agendamentos remove(Integer id) {
 
-        EntityManager em = new ConnectionFactory().getConnection();
         Agendamentos agendamentos = null;
 
         try {
@@ -62,7 +61,6 @@ public class AgendamentosDAO {
 
     public Agendamentos findById(Integer id) {
 
-        EntityManager em = new ConnectionFactory().getConnection();
         Agendamentos agendamentos = null;
 
         try {
@@ -79,7 +77,6 @@ public class AgendamentosDAO {
 
     public List<Agendamentos> findAll() {
 
-        EntityManager em = new ConnectionFactory().getConnection();
         List<Agendamentos> agendamentos = null;
 
         try {
@@ -89,6 +86,8 @@ public class AgendamentosDAO {
         } finally {
             em.close();
         }
+        
+        System.out.println("listando agendamentos");
 
         return agendamentos;
 

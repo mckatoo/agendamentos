@@ -16,9 +16,9 @@ import javax.persistence.EntityManager;
  */
 public class ProfessoresDAO {
 
-    public Professores save(Professores professores) {
+    private EntityManager em = new ConnectionFactory().getConnection();
 
-        EntityManager em = new ConnectionFactory().getConnection();
+    public Professores save(Professores professores) {
 
         try {
             em.getTransaction().begin();
@@ -41,7 +41,6 @@ public class ProfessoresDAO {
 
     public Professores remove(Integer id) {
 
-        EntityManager em = new ConnectionFactory().getConnection();
         Professores professores = null;
 
         try {
@@ -62,7 +61,6 @@ public class ProfessoresDAO {
 
     public Professores findById(Integer id) {
 
-        EntityManager em = new ConnectionFactory().getConnection();
         Professores professores = null;
 
         try {
@@ -79,7 +77,6 @@ public class ProfessoresDAO {
 
     public List<Professores> findAll() {
 
-        EntityManager em = new ConnectionFactory().getConnection();
         List<Professores> professores = null;
 
         try {

@@ -6,9 +6,8 @@
 package br.com.ikatoo.agendamentobackend.controllers;
 
 import br.com.ikatoo.agendamentobackend.models.Agendamentos;
+import br.com.ikatoo.agendamentobackend.models.dao.AgendamentosDAO;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.List;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -28,94 +27,58 @@ import javax.ws.rs.core.Response;
 @Path("agendamentos")
 public class AgendamentosController {
 
+    private final AgendamentosDAO dao = new AgendamentosDAO();
+
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/")
     public List<Agendamentos> listAgendamentos() throws ParseException {
-        Agendamentos agend1 = new Agendamentos();
-        agend1.setDia(new SimpleDateFormat("dd/MM/yyyy").parse("01/01/2001"));
-        agend1.setAmplificador(true);
-        agend1.setDatashow(true);
         
-//        agend1.setIdCurso(0);
-//        agend1.setIdProfessor(0);
-//        agend1.setIdTurma(0);
+        return dao.findAll();
 
-        agend1.setPreaula(true);
-        agend1.setPrimeirop(true);
-        agend1.setSegundop(true);
-
-        Agendamentos agend2 = new Agendamentos();
-        agend2.setDia(new SimpleDateFormat("dd/MM/yyyy").parse("22/02/2001"));
-        agend2.setAmplificador(false);
-        agend2.setDatashow(true);
-//        agend2.setIdCurso(1);
-//        agend2.setIdProfessor(3);
-//        agend2.setIdTurma(2);
-        agend2.setPreaula(false);
-        agend2.setPrimeirop(true);
-        agend2.setSegundop(false);
-
-        Agendamentos agend3 = new Agendamentos();
-        agend3.setDia(new SimpleDateFormat("dd/MM/yyyy").parse("25/03/2003"));
-        agend3.setAmplificador(false);
-        agend3.setDatashow(false);
-//        agend3.setIdCurso(3);
-//        agend3.setIdProfessor(1);
-//        agend3.setIdTurma(0);
-        agend3.setPreaula(false);
-        agend3.setPrimeirop(false);
-        agend3.setSegundop(false);
-
-        List<Agendamentos> agendamentos = new ArrayList();
-        agendamentos.add(agend1);
-        agendamentos.add(agend2);
-        agendamentos.add(agend3);
-
-        return agendamentos;
     }
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("{id}/")
-    public Agendamentos getAgendamento(@PathParam("id") long id) throws ParseException {
+    public Agendamentos getCurso(@PathParam("id") int id) throws ParseException {
 
-        Agendamentos agend1 = new Agendamentos();
-        agend1.setDia(new SimpleDateFormat("dd/MM/yyyy").parse("01/01/2001"));
-        agend1.setAmplificador(true);
-        agend1.setDatashow(true);
-//        agend1.setIdCurso(0);
-//        agend1.setIdProfessor(0);
-//        agend1.setIdTurma(0);
-        agend1.setPreaula(true);
-        agend1.setPrimeirop(true);
-        agend1.setSegundop(true);
+        System.out.println(id);
 
-        return null;
+        return dao.findById(id);
+
     }
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("/")
     public Response create(Agendamentos agendamento) {
-        System.out.println("Imprimindo");
-        System.out.println(agendamento.toString());
+
+        dao.save(agendamento);
+        
         return Response.status(Response.Status.OK).build();
+        
     }
 
     @PUT
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("/")
     public Response update(Agendamentos agendamento) {
-        System.out.println(agendamento.toString());
+        
+        dao.save(agendamento);
+        
         return Response.status(Response.Status.OK).build();
+        
     }
 
     @DELETE
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("{id}/")
-    public Response delete(@PathParam("id") long id) {
-        System.out.println("Deletando ID: " + id);
+    public Response delete(@PathParam("id") int id) {
+        
+        dao.remove(id);
+        
         return Response.status(Response.Status.OK).build();
+        
     }
 }
