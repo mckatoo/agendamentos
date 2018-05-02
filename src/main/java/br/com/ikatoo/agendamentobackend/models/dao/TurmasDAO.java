@@ -80,7 +80,23 @@ public class TurmasDAO {
         List<Turmas> turmas = null;
 
         try {
-            turmas = em.createQuery("from Turmas p").getResultList();
+            turmas = em.createQuery("from Turmas t").getResultList();
+        } catch (Exception e) {
+            System.err.println(e);
+        } finally {
+            em.close();
+        }
+
+        return turmas;
+
+    }
+
+    public List<Turmas> findCursos(Integer id) {
+
+        List<Turmas> turmas = null;
+
+        try {
+            turmas = em.createQuery("from Cursos c where idcurso="+id).getResultList();
         } catch (Exception e) {
             System.err.println(e);
         } finally {
