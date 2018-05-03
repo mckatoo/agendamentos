@@ -9,6 +9,7 @@ import br.com.ikatoo.agendamentobackend.connection.ConnectionFactory;
 import br.com.ikatoo.agendamentobackend.models.Turmas;
 import java.util.List;
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 
 /**
  *
@@ -96,7 +97,9 @@ public class TurmasDAO {
         List<Turmas> turmas = null;
 
         try {
-            turmas = em.createQuery("from Cursos c where idcurso="+id).getResultList();
+            Query q = em.createNamedQuery("Turmas.buscaPorCurso");
+            q.setParameter("id", id);
+            turmas = q.getResultList();
         } catch (Exception e) {
             System.err.println(e);
         } finally {

@@ -11,6 +11,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import org.hibernate.annotations.NamedQueries;
+import org.hibernate.annotations.NamedQuery;
 
 
 /**
@@ -19,6 +21,10 @@ import javax.persistence.ManyToOne;
  */
 
 @Entity
+@NamedQueries(
+        @NamedQuery(name = "Turmas.buscaPorCurso",
+                query = "SELECT t from Turmas t where t.curso.idcurso = :id")
+)
 public class Turmas {
     
     @Id

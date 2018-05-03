@@ -52,11 +52,11 @@ public class TurmasController {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/curso/{id}/")
-    public Turmas getCurso(@PathParam("id") int id) throws ParseException {
+    public List<Turmas> getTurmaPorCurso(@PathParam("id") int id) throws ParseException {
 
         System.out.println(id);
 
-        return (Turmas) dao.findCursos(id);
+        return dao.findCursos(id);
     }
 
     @POST
