@@ -41,9 +41,7 @@ public class AgendamentosController {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("{id}/")
-    public Agendamentos getCurso(@PathParam("id") int id) throws ParseException {
-
-        System.out.println(id);
+    public Agendamentos getCurso(@PathParam("id") Integer id) throws ParseException {
 
         return dao.findById(id);
 
@@ -55,6 +53,8 @@ public class AgendamentosController {
     public Response create(Agendamentos agendamento) {
 
         dao.save(agendamento);
+        
+        System.out.println("Salvando Agendamento");
         
         return Response.status(Response.Status.OK).build();
         
@@ -74,7 +74,7 @@ public class AgendamentosController {
     @DELETE
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("{id}/")
-    public Response delete(@PathParam("id") int id) {
+    public Response delete(@PathParam("id") Integer id) {
         
         dao.remove(id);
         

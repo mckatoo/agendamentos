@@ -41,7 +41,7 @@ public class CursosController {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("{id}/")
-    public Cursos getCurso(@PathParam("id") int id) throws ParseException {
+    public Cursos getCurso(@PathParam("id") Integer id) throws ParseException {
 
         System.out.println(id);
 
@@ -74,7 +74,7 @@ public class CursosController {
     @DELETE
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("{id}/")
-    public Response delete(@PathParam("id") int id) {
+    public Response delete(@PathParam("id") Integer id) {
         
         dao.remove(id);
         

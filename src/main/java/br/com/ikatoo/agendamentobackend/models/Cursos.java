@@ -5,6 +5,7 @@
  */
 package br.com.ikatoo.agendamentobackend.models;
 
+import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,10 +18,10 @@ import javax.persistence.Id;
  */
 
 @Entity
-public class Cursos {
+public class Cursos implements Serializable {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idcurso;
     private String curso;
 

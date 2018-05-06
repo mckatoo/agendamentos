@@ -6,15 +6,18 @@
     <class>br.com.ikatoo.agendamentobackend.models.Agendamentos</class>
     <class>br.com.ikatoo.agendamentobackend.models.Cursos</class>
     <class>br.com.ikatoo.agendamentobackend.models.Turmas</class>
+    <class>br.com.ikatoo.agendamentobackend.models.TipoUsuarios</class>
+    <class>br.com.ikatoo.agendamentobackend.models.Usuarios</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <shared-cache-mode>ALL</shared-cache-mode>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:49162/agendamentos"/>
       <property name="javax.persistence.jdbc.user" value="mckatoo"/>
       <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
       <property name="javax.persistence.jdbc.password" value="mikito"/>
       <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
-      <property name="hibernate.show_sql" value="true" />
-      <property name="hibernate.format_sql" value="true" />
+      <!--      <property name="hibernate.show_sql" value="true" />
+      <property name="hibernate.format_sql" value="true" />-->
     </properties>
   </persistence-unit>
 </persistence>

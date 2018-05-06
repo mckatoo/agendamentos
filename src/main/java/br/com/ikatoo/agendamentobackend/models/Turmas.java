@@ -5,6 +5,7 @@
  */
 package br.com.ikatoo.agendamentobackend.models;
 
+import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -25,10 +26,10 @@ import org.hibernate.annotations.NamedQuery;
         @NamedQuery(name = "Turmas.buscaPorCurso",
                 query = "SELECT t from Turmas t where t.curso.idcurso = :id")
 )
-public class Turmas {
+public class Turmas implements Serializable {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idturma;
     @ManyToOne
     @JoinColumn(name = "idcurso")

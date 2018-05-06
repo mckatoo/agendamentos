@@ -87,8 +87,6 @@ public class AgendamentosDAO {
             em.close();
         }
         
-        System.out.println("listando agendamentos");
-
         return agendamentos;
 
     }

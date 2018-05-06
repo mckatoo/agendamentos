@@ -1,6 +1,8 @@
 /home/mckatoo/Projetos/agendamentos/src/main/java/br/com/ikatoo/agendamentobackend/models/Professores.java
 /home/mckatoo/Projetos/agendamentos/src/main/java/br/com/ikatoo/agendamentobackend/models/Turmas.java
+/home/mckatoo/Projetos/agendamentos/src/main/java/br/com/ikatoo/agendamentobackend/models/Usuarios.java
 /home/mckatoo/Projetos/agendamentos/src/main/java/br/com/ikatoo/agendamentobackend/connection/ConnectionFactory.java
+/home/mckatoo/Projetos/agendamentos/src/main/java/br/com/ikatoo/agendamentobackend/models/TipoUsuarios.java
 /home/mckatoo/Projetos/agendamentos/src/main/java/br/com/ikatoo/agendamentobackend/models/Cursos.java
 /home/mckatoo/Projetos/agendamentos/src/main/java/br/com/ikatoo/agendamentobackend/App.java
 /home/mckatoo/Projetos/agendamentos/src/main/java/br/com/ikatoo/agendamentobackend/models/dao/ProfessoresDAO.java

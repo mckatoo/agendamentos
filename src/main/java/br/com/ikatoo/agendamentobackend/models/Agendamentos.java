@@ -5,6 +5,7 @@
  */
 package br.com.ikatoo.agendamentobackend.models;
 
+import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,10 +19,10 @@ import javax.persistence.ManyToOne;
  * @author mckatoo
  */
 @Entity
-public class Agendamentos {
+public class Agendamentos implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idagendamento;
     @ManyToOne
     @JoinColumn(name = "idprofessor")

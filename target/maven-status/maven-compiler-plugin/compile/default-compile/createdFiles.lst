@@ -1,5 +1,6 @@
 br/com/ikatoo/agendamentobackend/models/Professores.class
 br/com/ikatoo/agendamentobackend/models/Agendamentos.class
+br/com/ikatoo/agendamentobackend/models/Usuarios.class
 br/com/ikatoo/agendamentobackend/connection/ConnectionFactory.class
 br/com/ikatoo/agendamentobackend/controllers/ProfessoresController.class
 br/com/ikatoo/agendamentobackend/testes/Teste.class
@@ -10,6 +11,7 @@ br/com/ikatoo/agendamentobackend/models/dao/ProfessoresDAO.class
 br/com/ikatoo/agendamentobackend/models/Cursos.class
 br/com/ikatoo/agendamentobackend/controllers/AgendamentosController.class
 br/com/ikatoo/agendamentobackend/controllers/TurmasController.class
+br/com/ikatoo/agendamentobackend/models/TipoUsuarios.class
 br/com/ikatoo/agendamentobackend/models/dao/CursosDAO.class
 br/com/ikatoo/agendamentobackend/models/Turmas.class
 br/com/ikatoo/agendamentobackend/ResponseFilter.class

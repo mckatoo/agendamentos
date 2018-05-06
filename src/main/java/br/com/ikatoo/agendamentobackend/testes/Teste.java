@@ -26,39 +26,39 @@ public class Teste {
     
     public static void main(String[] args) throws ParseException {
 
-        Professores p = new Professores();
-        ProfessoresDAO Pdao = new ProfessoresDAO();
-        p.setIdprofessor(15);
-//        p.setProfessor("Professor Pedagogia");
-        Pdao.save(p);
-        
-        Cursos c = new Cursos();
-        CursosDAO Cdao = new CursosDAO();
-        c.setIdcurso(16);
-//        c.setCurso("Pedagogia");
-        Cdao.save(c);
-        
-        Turmas t = new Turmas();
-        TurmasDAO Tdao = new TurmasDAO();
-        t.setIdturma(17);
-//        t.setTurma("Terceiro Semestre");
-        t.setCurso(c);
-        Tdao.save(t);
-        
-        Agendamentos a = new Agendamentos();
-        a.setProfessor(p);
-        a.setTurma(t);
-        a.setCurso(c);
-        DateFormat f = new SimpleDateFormat("dd/MM/yyyy");
-        Date dia = f.parse("30/05/2018");
-        a.setDia(dia);
-        a.setPreaula(true);
-        a.setPrimeirop(false);
-        a.setSegundop(true);
-        a.setDatashow(false);
-        a.setAmplificador(true);
-        AgendamentosDAO Adao = new AgendamentosDAO();
-        Adao.save(a);
+//        Professores p = new Professores();
+//        ProfessoresDAO Pdao = new ProfessoresDAO();
+//        p.setIdprofessor(15);
+////        p.setProfessor("Professor Pedagogia");
+//        Pdao.save(p);
+//        
+//        Cursos c = new Cursos();
+//        CursosDAO Cdao = new CursosDAO();
+//        c.setIdcurso(16);
+////        c.setCurso("Pedagogia");
+//        Cdao.save(c);
+//        
+//        Turmas t = new Turmas();
+//        TurmasDAO Tdao = new TurmasDAO();
+//        t.setIdturma(17);
+////        t.setTurma("Terceiro Semestre");
+//        t.setCurso(c);
+//        Tdao.save(t);
+//        
+//        Agendamentos a = new Agendamentos();
+//        a.setProfessor(p);
+//        a.setTurma(t);
+//        a.setCurso(c);
+//        DateFormat f = new SimpleDateFormat("dd/MM/yyyy");
+//        Date dia = f.parse("30/05/2018");
+//        a.setDia(dia);
+//        a.setPreaula(true);
+//        a.setPrimeirop(false);
+//        a.setSegundop(true);
+//        a.setDatashow(false);
+//        a.setAmplificador(true);
+//        AgendamentosDAO Adao = new AgendamentosDAO();
+//        Adao.save(a);
 
         
         

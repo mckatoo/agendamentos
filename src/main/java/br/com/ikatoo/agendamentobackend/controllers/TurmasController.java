@@ -41,7 +41,7 @@ public class TurmasController {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("{id}/")
-    public Turmas getTurma(@PathParam("id") int id) throws ParseException {
+    public Turmas getTurma(@PathParam("id") Integer id) throws ParseException {
 
         System.out.println(id);
 
@@ -52,9 +52,7 @@ public class TurmasController {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/curso/{id}/")
-    public List<Turmas> getTurmaPorCurso(@PathParam("id") int id) throws ParseException {
-
-        System.out.println(id);
+    public List<Turmas> getTurmaPorCurso(@PathParam("id") Integer id) throws ParseException {
 
         return dao.findCursos(id);
     }
@@ -84,7 +82,7 @@ public class TurmasController {
     @DELETE
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("{id}/")
-    public Response delete(@PathParam("id") int id) {
+    public Response delete(@PathParam("id") Integer id) {
         
         dao.remove(id);
         
