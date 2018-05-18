@@ -11,10 +11,10 @@
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <shared-cache-mode>ALL</shared-cache-mode>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:49162/agendamentos"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://campus1-iesi.ddns.net:49162/agendamentos"/>
       <property name="javax.persistence.jdbc.user" value="mckatoo"/>
       <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-      <property name="javax.persistence.jdbc.password" value="mikito"/>
+      <property name="javax.persistence.jdbc.password" value="zicasp2"/>
       <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
       <!--      <property name="hibernate.show_sql" value="true" />
       <property name="hibernate.format_sql" value="true" />-->

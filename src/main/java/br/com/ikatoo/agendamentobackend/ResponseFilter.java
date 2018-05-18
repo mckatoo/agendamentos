@@ -11,7 +11,7 @@ public class ResponseFilter implements ContainerResponseFilter {
     @Override
     public void filter(ContainerRequestContext requestContext, ContainerResponseContext responseContext) throws IOException {
         MultivaluedMap<String, Object> headers = responseContext.getHeaders();
-        headers.add("Access-Control-Allow-Origin", "http://127.0.0.1:8080");
+        headers.add("Access-Control-Allow-Origin", "*");
         headers.add("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
         headers.add("Access-Control-Allow-Headers", "X-Requested-With, Content-Type, X-Codingpedia");
     }
