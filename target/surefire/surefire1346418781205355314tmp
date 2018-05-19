@@ -1,0 +1,6 @@
+#surefire
+#Sat May 19 11:21:37 BRT 2018
+maven.ext.class.path=/home/mckatoo/netbeans-8.2/java/maven-nblib/netbeans-eventspy.jar
+user.dir=/home/mckatoo/projetos/agendamentos
+localRepository=/home/mckatoo/.m2/repository
+basedir=/home/mckatoo/projetos/agendamentos
