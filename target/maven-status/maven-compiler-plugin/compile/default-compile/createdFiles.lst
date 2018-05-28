@@ -1,8 +1,8 @@
 br/com/ikatoo/agendamentobackend/models/Professores.class
-br/com/ikatoo/agendamentobackend/models/Agendamentos.class
 br/com/ikatoo/agendamentobackend/models/Usuarios.class
-br/com/ikatoo/agendamentobackend/connection/ConnectionFactory.class
+br/com/ikatoo/agendamentobackend/models/Agendamentos.class
 br/com/ikatoo/agendamentobackend/controllers/ProfessoresController.class
+br/com/ikatoo/agendamentobackend/connection/ConnectionFactory.class
 br/com/ikatoo/agendamentobackend/testes/Teste.class
 br/com/ikatoo/agendamentobackend/models/dao/TurmasDAO.class
 br/com/ikatoo/agendamentobackend/infra/HibernateUtil.class
