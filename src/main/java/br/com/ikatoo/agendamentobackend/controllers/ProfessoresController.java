@@ -52,12 +52,11 @@ public class ProfessoresController {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("/")
-    public String create(Professores professor) {
+    public Response create(Professores professor) {
 
         dao.save(professor);
         
-//        return Response.status(Response.Status.OK).build();
-        return professor.toString();
+        return Response.status(Response.Status.OK).build();
     }
 
     @PUT
